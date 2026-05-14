@@ -2,7 +2,25 @@
   "permissions": {
     "allow": [
       "Read(//Users/jrdev/Documents/infinitecipher branding/**)",
-      "Bash(npx create-next-app@latest *)"
+      "Bash(npx create-next-app@latest *)",
+      "Bash(npm install *)",
+      "Bash(npx shadcn@latest *)",
+      "Bash(cp \"/Users/jrdev/Documents/infinitecipher branding/infinitecipher-mark-dark.svg\" /Users/jrdev/projects/react/infinitecipher-website/public/)",
+      "Bash(cp \"/Users/jrdev/Documents/infinitecipher branding/infinitecipher-mark-light.svg\" /Users/jrdev/projects/react/infinitecipher-website/public/)",
+      "Bash(cp \"/Users/jrdev/Documents/infinitecipher branding/infinitecipher-nav-wordmark-dark.svg\" /Users/jrdev/projects/react/infinitecipher-website/public/)",
+      "Bash(cp \"/Users/jrdev/Documents/infinitecipher branding/infinitecipher-nav-wordmark-light.svg\" /Users/jrdev/projects/react/infinitecipher-website/public/)",
+      "Bash(cp \"/Users/jrdev/Documents/infinitecipher branding/infinitecipher-wordmark-dark.svg\" /Users/jrdev/projects/react/infinitecipher-website/public/)",
+      "Bash(npx tsc *)",
+      "Bash(xargs cat)",
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/services)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/work)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/contact)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(kill %1)"
     ]
   }
 }

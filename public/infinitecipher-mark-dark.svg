@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#0A0A0C"/>
+  <!-- IC monogram mark -->
+  <polygon points="40,40 136,40 160,64 160,160 40,160" stroke="#F1EFE8" stroke-width="5" stroke-linejoin="round" fill="none"/>
+  <!-- I bar top -->
+  <line x1="68" y1="74" x2="108" y2="74" stroke="#F1EFE8" stroke-width="5" stroke-linecap="round"/>
+  <!-- I stem -->
+  <line x1="88" y1="74" x2="88" y2="126" stroke="#F1EFE8" stroke-width="5" stroke-linecap="round"/>
+  <!-- I bar bottom -->
+  <line x1="68" y1="126" x2="108" y2="126" stroke="#F1EFE8" stroke-width="5" stroke-linecap="round"/>
+  <!-- C arc -->
+  <path d="M 130 82 C 152 82 162 90 162 100 C 162 110 152 118 130 118" stroke="#AFA9EC" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- accent dot at clipped corner -->
+  <circle cx="156" cy="64" r="7" fill="#AFA9EC"/>
+</svg>

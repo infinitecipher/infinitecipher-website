@@ -1,26 +1,148 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* shadcn mapped vars */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* IC semantic colors — reference CSS vars so they swap with theme */
+  --color-ic-void: var(--ic-void);
+  --color-ic-surface: var(--ic-surface);
+  --color-ic-border: var(--ic-border);
+  --color-ic-chalk: var(--ic-chalk);
+  --color-ic-muted: var(--ic-muted);
+  --color-ic-muted-2: var(--ic-muted-2);
+
+  /* IC accent colors — fixed, never change with theme */
+  --color-ic-lavender: #AFA9EC;
+  --color-ic-deep-cipher: #534AB7;
+  --color-ic-cipher-core: #3C3489;
+  --color-ic-teal: #5DCAA5;
+  --color-ic-deep-teal: #0F6E56;
+
+  /* Light palette aliases — always fixed */
+  --color-ic-parchment: #F5F4F0;
+  --color-ic-white: #FFFFFF;
+  --color-ic-silk: #D3D1C7;
+  --color-ic-ink: #0A0A0C;
+  --color-ic-stone: #888780;
+
+  /* Purple ramp */
+  --color-purple-50: #EEEDFE;
+  --color-purple-100: #CECBF6;
+  --color-purple-200: #AFA9EC;
+  --color-purple-400: #7F77DD;
+  --color-purple-600: #534AB7;
+  --color-purple-800: #3C3489;
+  --color-purple-900: #26215C;
+
+  /* Teal ramp */
+  --color-teal-50: #E1F5EE;
+  --color-teal-100: #9FE1CB;
+  --color-teal-200: #5DCAA5;
+  --color-teal-400: #1D9E75;
+  --color-teal-600: #0F6E56;
+  --color-teal-800: #085041;
+  --color-teal-900: #04342C;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Light theme (default) */
+:root {
+  --background: #F5F4F0;
+  --foreground: #0A0A0C;
+  --card: #FFFFFF;
+  --card-foreground: #0A0A0C;
+  --popover: #FFFFFF;
+  --popover-foreground: #0A0A0C;
+  --primary: #534AB7;
+  --primary-foreground: #EEEDFE;
+  --secondary: #F5F4F0;
+  --secondary-foreground: #0A0A0C;
+  --muted: #D3D1C7;
+  --muted-foreground: #888780;
+  --accent: #AFA9EC;
+  --accent-foreground: #0A0A0C;
+  --destructive: #E24B4A;
+  --destructive-foreground: #FFFFFF;
+  --border: #D3D1C7;
+  --input: #D3D1C7;
+  --ring: #534AB7;
+  --radius: 0.5rem;
+
+  /* IC semantic tokens — light values */
+  --ic-void:    #F5F4F0;
+  --ic-surface: #FFFFFF;
+  --ic-border:  #D3D1C7;
+  --ic-chalk:   #0A0A0C;
+  --ic-muted:   #888780;
+  --ic-muted-2: #D3D1C7;
+}
+
+.dark {
+  --background: #0A0A0C;
+  --foreground: #F1EFE8;
+  --card: #13131A;
+  --card-foreground: #F1EFE8;
+  --popover: #13131A;
+  --popover-foreground: #F1EFE8;
+  --primary: #534AB7;
+  --primary-foreground: #EEEDFE;
+  --secondary: #1E1E22;
+  --secondary-foreground: #F1EFE8;
+  --muted: #444441;
+  --muted-foreground: #888780;
+  --accent: #AFA9EC;
+  --accent-foreground: #0A0A0C;
+  --destructive: #E24B4A;
+  --destructive-foreground: #FFFFFF;
+  --border: #1E1E22;
+  --input: #1E1E22;
+  --ring: #AFA9EC;
+
+  /* IC semantic tokens — dark values */
+  --ic-void:    #0A0A0C;
+  --ic-surface: #13131A;
+  --ic-border:  #1E1E22;
+  --ic-chalk:   #F1EFE8;
+  --ic-muted:   #444441;
+  --ic-muted-2: #2C2C2A;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 }

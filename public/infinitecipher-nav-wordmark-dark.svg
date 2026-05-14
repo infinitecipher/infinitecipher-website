@@ -1,0 +1,19 @@
+<svg width="400" height="80" viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="80" fill="#0A0A0C"/>
+
+  <!-- IC mark -->
+  <polygon points="16,10 58,10 70,22 70,70 16,70" stroke="#F1EFE8" stroke-width="2" stroke-linejoin="round" fill="none"/>
+  <line x1="27" y1="29" x2="44" y2="29" stroke="#F1EFE8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="35" y1="29" x2="35" y2="52" stroke="#F1EFE8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="27" y1="52" x2="44" y2="52" stroke="#F1EFE8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 57 33 C 65 33 69 37 69 40 C 69 43 65 47 57 47" stroke="#AFA9EC" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <circle cx="68" cy="22" r="3.5" fill="#AFA9EC"/>
+
+  <!-- Vertical divider -->
+  <line x1="86" y1="18" x2="86" y2="62" stroke="#1E1E22" stroke-width="0.75"/>
+
+  <!-- "Infinite" in Georgia serif -->
+  <text x="100" y="48" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="400" letter-spacing="-0.5" fill="#F1EFE8">Infinite</text>
+  <!-- "CIPHER" in monospace -->
+  <text x="244" y="48" font-family="'Courier New', Courier, monospace" font-size="18" font-weight="700" letter-spacing="5" fill="#AFA9EC">CIPHER</text>
+</svg>

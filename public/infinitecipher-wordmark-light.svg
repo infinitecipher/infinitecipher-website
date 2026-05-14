@@ -1,0 +1,21 @@
+<svg width="520" height="160" viewBox="0 0 520 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="160" fill="#F5F4F0"/>
+
+  <!-- IC mark (scaled down) -->
+  <polygon points="24,24 84,24 100,40 100,136 24,136" stroke="#0A0A0C" stroke-width="3.5" stroke-linejoin="round" fill="none"/>
+  <line x1="40" y1="53" x2="67" y2="53" stroke="#0A0A0C" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="53" y1="53" x2="53" y2="107" stroke="#0A0A0C" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="40" y1="107" x2="67" y2="107" stroke="#0A0A0C" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 82 62 C 96 62 102 70 102 80 C 102 90 96 98 82 98" stroke="#534AB7" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <circle cx="99" cy="40" r="5" fill="#534AB7"/>
+
+  <!-- Divider line -->
+  <line x1="120" y1="36" x2="120" y2="124" stroke="#D3D1C7" stroke-width="0.75"/>
+
+  <!-- Wordmark -->
+  <text x="140" y="88" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="400" letter-spacing="-1" fill="#0A0A0C">Infinite</text>
+  <text x="140" y="122" font-family="'Courier New', Courier, monospace" font-size="22" font-weight="700" letter-spacing="6" fill="#534AB7">CIPHER</text>
+
+  <!-- Tagline -->
+  <text x="140" y="143" font-family="'Courier New', Courier, monospace" font-size="9" letter-spacing="3" fill="#B4B2A9">ENCODE · BUILD · SECURE</text>
+</svg>

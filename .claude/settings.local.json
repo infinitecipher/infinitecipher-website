@@ -23,7 +23,8 @@
       "Bash(kill %1)",
       "Bash(node -e \"require\\('sharp'\\)\")",
       "Bash(node *)",
-      "Bash(convert /tmp/favicon-16.png /tmp/favicon-32.png -colors 256 app/favicon.ico)"
+      "Bash(convert /tmp/favicon-16.png /tmp/favicon-32.png -colors 256 app/favicon.ico)",
+      "Bash(npm info *)"
     ]
   }
 }

@@ -96,8 +96,8 @@ export default function ServicesPage() {
     <>
       {/* HERO */}
       <section className="relative pt-32 pb-20 bg-ic-void overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 pointer-events-none" aria-hidden="true">
-          <IcosahedronCanvas opacity={0.4} scale={2} className="w-full h-full" />
+        <div className="absolute top-0 right-0 w-96 h-96">
+          <IcosahedronCanvas opacity={0.6} scale={2.4} className="w-full h-full" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="font-mono text-[10px] tracking-widest uppercase text-ic-muted mb-4">OUR SERVICES</p>

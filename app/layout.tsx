@@ -37,7 +37,7 @@ const jsonLd = {
   "@type": "Organization",
   name: "InfiniteCipher",
   url: siteUrl,
-  email: "hello@infinitecipher.com",
+  email: "infinitecipher04@gmail.com",
   description:
     "Web and mobile development studio helping businesses launch websites, web applications, and mobile apps that perform.",
   serviceType: ["Web Development", "Mobile App Development", "Web Application Development"],

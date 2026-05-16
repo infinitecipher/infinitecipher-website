@@ -63,7 +63,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-ic-stone">
                 <Mail className="h-3.5 w-3.5 text-ic-lavender flex-shrink-0" />
-                hello@infinitecipher.com
+                infinitecipher04@gmail.com
               </li>
               <li className="flex items-center gap-2 text-sm text-ic-stone">
                 <MapPin className="h-3.5 w-3.5 text-ic-lavender flex-shrink-0" />

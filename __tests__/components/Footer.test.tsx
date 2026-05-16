@@ -49,6 +49,6 @@ describe("Footer", () => {
 
   it("renders the email address", () => {
     render(<Footer />);
-    expect(screen.getByText(/hello@infinitecipher\.com/i)).toBeInTheDocument();
+    expect(screen.getByText(/infinitecipher04@gmail\.com/i)).toBeInTheDocument();
   });
 });

@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -17,6 +18,8 @@ interface Project {
   gradFrom: string;
   gradTo: string;
   accentColor: string;
+  url?: string;
+  image?: string;
 }
 
 const projects: Project[] = [
@@ -74,6 +77,17 @@ const projects: Project[] = [
     gradTo: "#0F6E56",
     accentColor: "#AFA9EC",
   },
+  {
+    name: "Elite Global Workforce",
+    category: "Website",
+    tags: ["Next.js", "CMS", "WhatsApp API"],
+    description: "International manpower and recruitment agency website connecting skilled workers from Asia and Africa with verified employers across Kuwait, Croatia, and Albania.",
+    gradFrom: "#0C4A6E",
+    gradTo: "#082F49",
+    accentColor: "#38BDF8",
+    url: "https://www.eliteglobalworkforce.com",
+    image: "/work/elite-global-workforce.png",
+  },
 ];
 
 const filters = ["All", "Website", "Web App", "Mobile App"];
@@ -127,10 +141,22 @@ export default function WorkPage() {
                 transition={{ duration: 0.35, delay: i * 0.05 }}
               >
                 <Card className="group bg-ic-surface border-ic-border hover:border-ic-lavender transition-all duration-300 hover:scale-[1.02] overflow-hidden h-full">
-                  <div
-                    className="h-48 w-full"
-                    style={{ background: `linear-gradient(135deg, ${proj.gradFrom}, ${proj.gradTo})` }}
-                  />
+                  {proj.image ? (
+                    <div className="h-48 w-full overflow-hidden">
+                      <Image
+                        src={proj.image}
+                        alt={proj.name}
+                        width={1911}
+                        height={913}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="h-48 w-full"
+                      style={{ background: `linear-gradient(135deg, ${proj.gradFrom}, ${proj.gradTo})` }}
+                    />
+                  )}
                   <CardHeader className="pt-5 pb-2">
                     <div className="flex items-start justify-between gap-2 mb-1">
                       <h3 className="font-serif text-xl text-ic-chalk">{proj.name}</h3>
@@ -155,12 +181,23 @@ export default function WorkPage() {
                   </CardHeader>
                   <CardContent className="pb-5">
                     <p className="text-ic-stone text-sm leading-relaxed mb-4">{proj.description}</p>
-                    <Link
-                      href="/contact"
-                      className="text-ic-lavender font-mono text-[11px] tracking-wide hover:text-ic-chalk transition-colors"
-                    >
-                      View case study →
-                    </Link>
+                    {proj.url ? (
+                      <a
+                        href={proj.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-ic-lavender font-mono text-[11px] tracking-wide hover:text-ic-chalk transition-colors"
+                      >
+                        Visit site →
+                      </a>
+                    ) : (
+                      <Link
+                        href="/contact"
+                        className="text-ic-lavender font-mono text-[11px] tracking-wide hover:text-ic-chalk transition-colors"
+                      >
+                        View case study →
+                      </Link>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>

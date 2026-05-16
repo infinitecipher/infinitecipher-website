@@ -24,7 +24,11 @@
       "Bash(node -e \"require\\('sharp'\\)\")",
       "Bash(node *)",
       "Bash(convert /tmp/favicon-16.png /tmp/favicon-32.png -colors 256 app/favicon.ico)",
-      "Bash(npm info *)"
+      "Bash(npm info *)",
+      "WebFetch(domain:www.eliteglobalworkforce.com)",
+      "Bash(/opt/homebrew/bin/chromium --headless=new --screenshot=/Users/jrdev/projects/react/infinitecipher-website/public/work/elite-global-workforce.png --window-size=1280,800 --hide-scrollbars https://www.eliteglobalworkforce.com/)",
+      "Bash(curl -L \"https://image.thum.io/get/width/1280/crop/800/https://www.eliteglobalworkforce.com/\" -o /Users/jrdev/projects/react/infinitecipher-website/public/work/elite-global-workforce.png)",
+      "Bash(sips -s format jpeg /Users/jrdev/projects/react/infinitecipher-website/public/work/elite-global-workforce.png --out /Users/jrdev/projects/react/infinitecipher-website/public/work/elite-global-workforce.jpg)"
     ]
   }
 }

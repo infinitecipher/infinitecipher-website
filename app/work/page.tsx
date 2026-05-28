@@ -66,6 +66,7 @@ export default function WorkPage() {
                         alt={proj.name}
                         width={1911}
                         height={913}
+                        loading="eager"
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>

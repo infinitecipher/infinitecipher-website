@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const siteUrl = "https://infinitecipher.com";
 
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </Providers>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
     </html>
   );
 }
